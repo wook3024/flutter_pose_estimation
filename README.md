@@ -1,4 +1,4 @@
-# tflite_demo
+# Posenet Demo
 
 A new Flutter project.
 
