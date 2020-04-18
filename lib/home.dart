@@ -56,7 +56,7 @@ class _HomePageState extends State<HomePage> {
               _model,
               setRecognitions,
             ),
-            BndBox(
+            KeyPoints(
                 _recognitions == null ? [] : _recognitions,
                 math.max(_imageHeight, _imageWidth),
                 math.min(_imageHeight, _imageWidth),

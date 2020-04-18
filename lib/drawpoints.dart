@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class BndBox extends StatelessWidget {
+class KeyPoints extends StatelessWidget {
   final List<dynamic> results;
   final int previewH;
   final int previewW;
@@ -8,8 +8,8 @@ class BndBox extends StatelessWidget {
   final double screenW;
   final String model;
 
-  BndBox(this.results, this.previewH, this.previewW, this.screenH, this.screenW,
-      this.model);
+  KeyPoints(this.results, this.previewH, this.previewW, this.screenH,
+      this.screenW, this.model);
 
   @override
   Widget build(BuildContext context) {
