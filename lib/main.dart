@@ -1,12 +1,14 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
+// import 'package:opengl/opengl.dart';
 import 'home.dart';
 
 List<CameraDescription> cameras;
 
 Future<Null> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  // initOpenGL();
   try {
     cameras = await availableCameras();
   } on CameraException catch (e) {

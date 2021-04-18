@@ -36,8 +36,13 @@ class _HomePageState extends State<HomePage> {
 
   _loadModel() async {
     String res;
-    res = await Tflite.loadModel(model: "assets/posenet.tflite");
+    res = await Tflite.loadModel(
+        model: "assets/posenet_mv1_075_float_from_checkpoints.tflite",
+        numThreads: 4,
+        // useGpuDelegate: true
+    );
     log(res);
+
     _model = 'posenet';
     setState(() {});
   }

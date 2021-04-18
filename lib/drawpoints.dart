@@ -34,16 +34,27 @@ class KeyPoints extends StatelessWidget {
             x = _x * scaleW;
             y = (_y - difH / 2) * scaleH;
           }
+
+          // To solve mirror problem on front camera
+          if (x > 320) {
+            var temp = x - 320;
+            x = 320 - temp;
+          } else {
+            var temp = 320 - x;
+            x = 320 + temp;
+          }
+
           return Positioned(
-            left: x + 65,
-            top: y + 70,
+            left: x - 230,
+            top: y - 50,
             width: 100,
-            height: 12,
+            height: 15,
             child: Container(
               child: Text(
-                "● ${k["part"]}",
+                "●",
+                // "● ${k["part"]}",
                 style: TextStyle(
-                  color: Colors.orange,
+                  color: Color.fromRGBO(37, 213, 253, 1.0),
                   fontSize: 12.0,
                 ),
               ),
@@ -53,7 +64,6 @@ class KeyPoints extends StatelessWidget {
 
         lists..addAll(list);
       });
-
       return lists;
     }
 

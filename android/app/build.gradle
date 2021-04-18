@@ -53,7 +53,7 @@ android {
             signingConfig signingConfigs.debug
         }
     }
-        aaptOptions {
+    aaptOptions {
         noCompress 'tflite'
         noCompress 'lite'
     }

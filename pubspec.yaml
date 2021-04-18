@@ -23,8 +23,11 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
-  tflite:
+  tflite: 1.1.1
   camera:
+  tflite_flutter_helper: 0.1.2
+#  opengl: ^0.3.4
+  tflite_flutter: 0.5.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -37,6 +40,12 @@ flutter:
   # The following line ensures that the Material Icons font is
   assets:
     - assets/posenet.tflite
+    - assets/posenet_mobilenet_v1_100_257x257_multi_kpt_stripped.tflite
+    - assets/model_gpu.tflite
+    - assets/posenet_mobilenet_float_075_1_default_1.tflite
+    - assets/model.tflite
+    - assets/posenet_mv1_075_float_from_checkpoints.tflite
+    - assets/pose_landmark_full_body.tflite
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
