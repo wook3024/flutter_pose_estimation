@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
 import 'package:tflite/tflite.dart';
-import 'package:tflite_flutter_helper/tflite_flutter_helper.dart';
 import 'dart:math' as math;
 
 
@@ -22,7 +21,7 @@ class _CameraState extends State<Camera> {
   CameraController controller;
   bool isDetecting = false;
   int padSize;
-  ImageProcessor imageProcessor;
+  // ImageProcessor imageProcessor;
   static const int INPUT_SIZE = 337;
 
   @override
@@ -35,7 +34,7 @@ class _CameraState extends State<Camera> {
       print(widget.cameras.length);
       controller = new CameraController(
         widget.cameras[1],
-        ResolutionPreset.high,
+        ResolutionPreset.low,
       );
       controller.initialize().then((_) {
         if (!mounted) {

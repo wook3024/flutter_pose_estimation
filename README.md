@@ -1,4 +1,4 @@
-# Posenet Demo
+# Flutter Pose Estimation Demo
 
 A new Flutter project.
 
